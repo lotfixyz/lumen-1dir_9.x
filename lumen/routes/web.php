@@ -14,5 +14,5 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return $router->app->version() . ' (' . env('APP_NAME') . ' ' . env('APP_1DIR_VERSION') . ')';
 });
